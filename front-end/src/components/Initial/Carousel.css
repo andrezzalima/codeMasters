@@ -1,0 +1,33 @@
+.background-carrocel{
+    background-color: white;
+    font-family: 'Play', sans-serif;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    font-size: 30px;
+    font: 700;    
+    border-radius: 30px;  
+
+}
+
+.imagens-carrocel{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+
+  
+}
+.code{
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+
+}
+
+.vetor{
+    width: 100px;
+}
