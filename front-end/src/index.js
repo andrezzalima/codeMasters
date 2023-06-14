@@ -1,12 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import MyApp from './App';
-import Card from './components/Card';
+import ReactDOM from 'react-dom/client';
+import App from './App';
 
-ReactDOM.render(
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
   <React.StrictMode>
-    <MyApp />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );

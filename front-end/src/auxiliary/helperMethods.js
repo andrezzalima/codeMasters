@@ -1,7 +1,6 @@
 const generateRandomElements = (arr) => {
     const randomIndex1 = Math.floor(Math.random() * arr.length);
-    const randomIndex2 =
-        (randomIndex1 + Math.floor(Math.random() * (arr.length - 1) + 1)) %
+    const randomIndex2 = (randomIndex1 + Math.floor(Math.random() * (arr.length - 1) + 1)) %
         arr.length;
 
     const randomElements = arr

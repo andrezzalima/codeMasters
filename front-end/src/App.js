@@ -1,14 +1,13 @@
-import React from 'react';
-import './App.css';
-import Card from './components/Card';
+import { BrowserRouter } from "react-router-dom";
+import Routes from "./Routes";
+import "./App.css";
 
-
-function MyApp() {
-  return (
-    <div>
-      <Card />
-    </div>
-  );
+function App() {
+    return (
+        <BrowserRouter>
+            <Routes />
+        </BrowserRouter>
+    );
 }
 
 export default MyApp;
