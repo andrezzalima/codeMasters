@@ -1,0 +1,525 @@
+[{
+  "_id": {
+    "$oid": "6489d15ef514bc90e501949c"
+  }
+},
+{
+  "_id": {
+    "$oid": "6489d182f514bc90e501949d"
+  },
+  "prompt": "O que é JavaScript e qual é o seu propósito principal?",
+  "options": [
+    "JavaScript é uma linguagem de marcação para criar páginas web.",
+    "JavaScript é uma linguagem de programação usada principalmente para tornar as páginas web interativas.",
+    "JavaScript é um banco de dados amplamente utilizado para armazenar informações.",
+    "JavaScript é uma biblioteca JavaScript para construir interfaces de usuário."
+  ],
+  "correct": "JavaScript é uma linguagem de programação usada principalmente para tornar as páginas web interativas."
+},
+{
+  "_id": {
+    "$oid": "6489d182f514bc90e501949e"
+  },
+  "prompt": "Quais são os tipos de dados primitivos em JavaScript?",
+  "options": [
+    "Inteiro, string, booleano e objeto.",
+    "Número, caractere, booleano e matriz.",
+    "Número, string, booleano e indefinido.",
+    "Inteiro, caractere, verdadeiro e falso."
+  ],
+  "correct": "Número, string, booleano e indefinido."
+},
+{
+  "_id": {
+    "$oid": "6489d182f514bc90e501949f"
+  },
+  "prompt": "O que significa 'hoisting' em JavaScript?",
+  "options": [
+    "É um recurso do JavaScript que permite elevar uma função para o topo do escopo antes da sua declaração.",
+    "É um método para verificar se uma variável já foi declarada antes de usá-la.",
+    "É um tipo de erro que ocorre quando uma função é chamada antes de ser declarada.",
+    "É um recurso do JavaScript que permite definir variáveis globais."
+  ],
+  "correct": "É um recurso do JavaScript que permite elevar uma função para o topo do escopo antes da sua declaração."
+},
+{
+  "_id": {
+    "$oid": "6489d182f514bc90e50194a0"
+  },
+  "prompt": "Como você pode verificar o tipo de uma variável em JavaScript?",
+  "options": [
+    "Usando o operador 'typeof.",
+    "Usando o operador 'instanceof'.",
+    "Usando o método 'getType()' do objeto da variável.",
+    "Não é possível verificar o tipo de uma variável em JavaScript."
+  ],
+  "correct": "Usando o operador 'typeof'."
+},
+{
+  "_id": {
+    "$oid": "6489d182f514bc90e50194a1"
+  },
+  "prompt": "Explique a diferença entre 'null' e 'undefined' em JavaScript.",
+  "options": [
+    "'Null' é um valor atribuído explicitamente para indicar a ausência de um valor, enquanto 'undefined' indica uma variável que foi declarada, mas não atribuída com um valor.",
+    "'Null' indica uma variável que foi declarada, mas não atribuída com um valor, enquanto 'undefined' é um valor atribuído explicitamente para indicar a ausência de um valor.",
+    "'Null' e 'undefined' são sinônimos e podem ser usados indistintamente.",
+    "'Null' e 'undefined' são valores reservados em JavaScript e não podem ser atribuídos a variáveis."
+  ],
+  "correct": "'Null' é um valor atribuído explicitamente para indicar a ausência de um valor, enquanto 'undefined' indica uma variável que foi declarada, mas não atribuída com um valor."
+},
+{
+  "_id": {
+    "$oid": "6489d182f514bc90e50194a2"
+  },
+  "prompt": "O que é React e por que é popular no desenvolvimento web?",
+  "options": [
+    "Uma linguagem de programação para criação de aplicativos móveis.",
+    "Uma biblioteca JavaScript para construir interfaces de usuário.",
+    "Um framework para desenvolvimento de jogos em 3D.",
+    "Um protocolo de rede para comunicação entre servidores e clientes."
+  ],
+  "correct": "Uma biblioteca JavaScript para construir interfaces de usuário."
+},
+{
+  "_id": {
+    "$oid": "6489d182f514bc90e50194a3"
+  },
+  "prompt": "Qual é a diferença entre componentes funcionais e componentes de classe no React?",
+  "options": [
+    "Componentes funcionais são mais eficientes em termos de desempenho.",
+    "Componentes de classe permitem o uso de hooks.",
+    "Componentes funcionais são escritos em ES6, enquanto componentes de classe são escritos em ES5.",
+    "Componentes de classe têm acesso ao ciclo de vida completo do React."
+  ],
+  "correct": "Componentes de classe permitem o uso de hooks."
+},
+{
+  "_id": {
+    "$oid": "6489d182f514bc90e50194a4"
+  },
+  "prompt": "O que é JSX no React?",
+  "options": [
+    "Uma sintaxe alternativa para escrever HTML em JavaScript.",
+    "Uma função para criar componentes no React.",
+    "Uma ferramenta de transpilação para converter código React em código JavaScript puro.",
+    "Uma biblioteca para gerenciamento de estado no React."
+  ],
+  "correct": "Uma sintaxe alternativa para escrever HTML em JavaScript."
+},
+{
+  "_id": {
+    "$oid": "6489d182f514bc90e50194a5"
+  },
+  "prompt": "O que é o estado (state) no React e como ele é usado?",
+  "options": [
+    "O estado representa dados imutáveis no React e é usado para renderizar componentes.",
+    "O estado é um objeto JavaScript que contém dados mutáveis e é usado para interagir com APIs externas.",
+    "O estado é uma função do React que permite manipular eventos de clique.",
+    "O estado é uma propriedade especial no React que permite compartilhar dados entre componentes."
+  ],
+  "correct": "O estado representa dados imutáveis no React e é usado para renderizar componentes."
+},
+{
+  "_id": {
+    "$oid": "6489d182f514bc90e50194a6"
+  },
+  "prompt": "O que são 'props' no React e como eles são usados?",
+  "options": [
+    "'Props' são funções assíncronas no React que permitem lidar com chamadas de API.",
+    "'Props' são propriedades que permitem passar dados de um componente pai para um componente filho.",
+    "'Props' são variáveis globais que podem ser acessadas em qualquer componente no React.",
+    "'Props' são estilos CSS pré-definidos usados para estilizar componentes no React."
+  ],
+  "correct": "'Props' são propriedades que permitem passar dados de um componente pai para um componente filho."
+},
+{
+  "_id": {
+    "$oid": "6489d182f514bc90e50194a7"
+  },
+  "prompt": "O que é o Express.js e qual é o seu propósito no desenvolvimento web?",
+  "options": [
+    "Uma linguagem de programação para construção de interfaces de usuário.",
+    "Um banco de dados relacional amplamente utilizado.",
+    "Um framework Node.js rápido, flexível e minimalista para criação de aplicativos web.",
+    "Um serviço de hospedagem na nuvem para aplicativos web."
+  ],
+  "correct": "Um framework Node.js rápido, flexível e minimalista para criação de aplicativos web."
+},
+{
+  "_id": {
+    "$oid": "6489d182f514bc90e50194a8"
+  },
+  "prompt": "Como você lida com rotas (routes) no Express?",
+  "options": [
+    "O Express lida automaticamente com as rotas com base no URL da solicitação.",
+    "As rotas são configuradas usando os métodos HTTP e os caminhos de URL correspondentes no Express.",
+    "As rotas são gerenciadas apenas por um servidor separado, não pelo Express.",
+    "O Express oferece apenas suporte para rotas GET, não para outros métodos HTTP."
+  ],
+  "correct": "As rotas são configuradas usando os métodos HTTP e os caminhos de URL correspondentes no Express."
+},
+{
+  "_id": {
+    "$oid": "6489d182f514bc90e50194a9"
+  },
+  "prompt": "O que são middlewares no Express e como eles são usados?",
+  "options": [
+    "Middlewares são funções que têm acesso ao objeto de solicitação (request) e ao objeto de resposta (response) e podem executar ações intermediárias.",
+    "Middlewares são componentes gráficos usados para criar a interface do usuário no Express.",
+    "Middlewares são recursos externos, como bancos de dados, integrados ao Express.",
+    "Middlewares são usados apenas para autenticação de usuários no Express."
+  ],
+  "correct": "Middlewares são funções que têm acesso ao objeto de solicitação (request) e ao objeto de resposta (response) e podem executar ações intermediárias."
+},
+{
+  "_id": {
+    "$oid": "6489d182f514bc90e50194aa"
+  },
+  "prompt": "Como você pode lidar com solicitações POST no Express?",
+  "options": [
+    "As solicitações POST são tratadas automaticamente pelo Express e não exigem configuração adicional.",
+    "As solicitações POST são tratadas usando o método 'express.post()' no Express.",
+    "As solicitações POST são tratadas usando o middleware 'body-parser' para analisar os dados do corpo da solicitação.",
+    "O Express não suporta solicitações POST, apenas solicitações GET."
+  ],
+  "correct": "As solicitações POST são tratadas usando o middleware 'body-parser' para analisar os dados do corpo da solicitação."
+},
+{
+  "_id": {
+    "$oid": "6489d182f514bc90e50194ab"
+  },
+  "prompt": "Como você lida com erros (errors) no Express?",
+  "options": [
+    "Os erros são tratados automaticamente pelo Express e não requerem nenhum código adicional.",
+    "Erros são tratados usando o middleware 'express-error-handler' no Express.",
+    "Erros são tratados usando blocos try-catch no código do Express.",
+    "Erros são tratados usando middlewares de tratamento de erros no Express."
+  ],
+  "correct": "Erros são tratados usando middlewares de tratamento de erros no Express."
+},
+{
+  "_id": {
+    "$oid": "6489d182f514bc90e50194ac"
+  },
+  "prompt": "O que é o MongoDB e como ele difere de um banco de dados relacional?",
+  "options": [
+    "O MongoDB é um banco de dados relacional que segue o modelo SQL.",
+    "O MongoDB é um banco de dados baseado em documentos, enquanto os bancos de dados relacionais são baseados em tabelas.",
+    "O MongoDB é um banco de dados de memória volátil, enquanto os bancos de dados relacionais são persistentes.",
+    "O MongoDB é uma linguagem de programação usada para consultas em bancos de dados relacionais."
+  ],
+  "correct": "O MongoDB é um banco de dados baseado em documentos, enquanto os bancos de dados relacionais são baseados em tabelas."
+},
+{
+  "_id": {
+    "$oid": "6489d182f514bc90e50194ad"
+  },
+  "prompt": "Quais são as vantagens do MongoDB em relação a outros bancos de dados?",
+  "options": [
+    "Esquema flexível, escalabilidade horizontal e suporte nativo para transações.",
+    "Velocidade de leitura e escrita, suporte para chaves estrangeiras e integridade referencial.",
+    "Baixo consumo de memória, suporte nativo para SQL e alta disponibilidade.",
+    "Melhor desempenho em consultas complexas, recursos avançados de relatórios e fácil integração com frameworks JavaScript."
+  ],
+  "correct": "Esquema flexível, escalabilidade horizontal e suporte nativo para transações."
+},
+{
+  "_id": {
+    "$oid": "6489d182f514bc90e50194ae"
+  },
+  "prompt": "Como você pode se conectar a um banco de dados MongoDB usando JavaScript?",
+  "options": [
+    "Usando uma conexão direta através do protocolo TCP/IP.",
+    "Utilizando o pacote 'mongo-connector' disponível no npm.",
+    "Utilizando o driver oficial do MongoDB para JavaScript, como o 'mongodb' ou 'mongoose'.",
+    "Não é possível se conectar a um banco de dados MongoDB usando JavaScript."
+  ],
+  "correct": "Utilizando o driver oficial do MongoDB para JavaScript, como o 'mongodb' ou 'mongoose'."
+},
+{
+  "_id": {
+    "$oid": "6489d182f514bc90e50194af"
+  },
+  "prompt": "O que é uma coleção (collection) no MongoDB?",
+  "options": [
+    "Um grupo de bancos de dados relacionados no MongoDB.",
+    "Um conjunto de registros com uma estrutura de dados definida no MongoDB.",
+    "Uma tabela no MongoDB que contém dados relacionais.",
+    "Uma função no MongoDB que permite agrupar documentos para consulta."
+  ],
+  "correct": "Um conjunto de registros com uma estrutura de dados definida no MongoDB."
+},
+{
+  "_id": {
+    "$oid": "6489d182f514bc90e50194b0"
+  },
+  "prompt": "Como você pode consultar dados em um banco de dados MongoDB usando JavaScript?",
+  "options": [
+    "Utilizando o método 'find()' em uma coleção do MongoDB.",
+    "Escrevendo consultas SQL no código JavaScript para obter dados do MongoDB.",
+    "Utilizando o método 'query()' no objeto de conexão com o banco de dados MongoDB.",
+    "Não é possível consultar dados em um banco de dados MongoDB usando JavaScript."
+  ],
+  "correct": "Utilizando o método 'find()' em uma coleção do MongoDB."
+},
+{
+  "_id": {
+    "$oid": "6489d1e3f514bc90e50194b1"
+  },
+  "prompt": "O que é JavaScript e qual é o seu propósito principal?",
+  "options": [
+    "JavaScript é uma linguagem de marcação para criar páginas web.",
+    "JavaScript é uma linguagem de programação usada principalmente para tornar as páginas web interativas.",
+    "JavaScript é um banco de dados amplamente utilizado para armazenar informações.",
+    "JavaScript é uma biblioteca JavaScript para construir interfaces de usuário."
+  ],
+  "correct": "JavaScript é uma linguagem de programação usada principalmente para tornar as páginas web interativas."
+},
+{
+  "_id": {
+    "$oid": "6489d1e3f514bc90e50194b2"
+  },
+  "prompt": "Quais são os tipos de dados primitivos em JavaScript?",
+  "options": [
+    "Inteiro, string, booleano e objeto.",
+    "Número, caractere, booleano e matriz.",
+    "Número, string, booleano e indefinido.",
+    "Inteiro, caractere, verdadeiro e falso."
+  ],
+  "correct": "Número, string, booleano e indefinido."
+},
+{
+  "_id": {
+    "$oid": "6489d1e3f514bc90e50194b3"
+  },
+  "prompt": "O que significa 'hoisting' em JavaScript?",
+  "options": [
+    "É um recurso do JavaScript que permite elevar uma função para o topo do escopo antes da sua declaração.",
+    "É um método para verificar se uma variável já foi declarada antes de usá-la.",
+    "É um tipo de erro que ocorre quando uma função é chamada antes de ser declarada.",
+    "É um recurso do JavaScript que permite definir variáveis globais."
+  ],
+  "correct": "É um recurso do JavaScript que permite elevar uma função para o topo do escopo antes da sua declaração."
+},
+{
+  "_id": {
+    "$oid": "6489d1e3f514bc90e50194b4"
+  },
+  "prompt": "Como você pode verificar o tipo de uma variável em JavaScript?",
+  "options": [
+    "Usando o operador 'typeof.",
+    "Usando o operador 'instanceof'.",
+    "Usando o método 'getType()' do objeto da variável.",
+    "Não é possível verificar o tipo de uma variável em JavaScript."
+  ],
+  "correct": "Usando o operador 'typeof'."
+},
+{
+  "_id": {
+    "$oid": "6489d1e3f514bc90e50194b5"
+  },
+  "prompt": "Explique a diferença entre 'null' e 'undefined' em JavaScript.",
+  "options": [
+    "'Null' é um valor atribuído explicitamente para indicar a ausência de um valor, enquanto 'undefined' indica uma variável que foi declarada, mas não atribuída com um valor.",
+    "'Null' indica uma variável que foi declarada, mas não atribuída com um valor, enquanto 'undefined' é um valor atribuído explicitamente para indicar a ausência de um valor.",
+    "'Null' e 'undefined' são sinônimos e podem ser usados indistintamente.",
+    "'Null' e 'undefined' são valores reservados em JavaScript e não podem ser atribuídos a variáveis."
+  ],
+  "correct": "'Null' é um valor atribuído explicitamente para indicar a ausência de um valor, enquanto 'undefined' indica uma variável que foi declarada, mas não atribuída com um valor."
+},
+{
+  "_id": {
+    "$oid": "6489d1e3f514bc90e50194b6"
+  },
+  "prompt": "O que é React e por que é popular no desenvolvimento web?",
+  "options": [
+    "Uma linguagem de programação para criação de aplicativos móveis.",
+    "Uma biblioteca JavaScript para construir interfaces de usuário.",
+    "Um framework para desenvolvimento de jogos em 3D.",
+    "Um protocolo de rede para comunicação entre servidores e clientes."
+  ],
+  "correct": "Uma biblioteca JavaScript para construir interfaces de usuário."
+},
+{
+  "_id": {
+    "$oid": "6489d1e3f514bc90e50194b7"
+  },
+  "prompt": "Qual é a diferença entre componentes funcionais e componentes de classe no React?",
+  "options": [
+    "Componentes funcionais são mais eficientes em termos de desempenho.",
+    "Componentes de classe permitem o uso de hooks.",
+    "Componentes funcionais são escritos em ES6, enquanto componentes de classe são escritos em ES5.",
+    "Componentes de classe têm acesso ao ciclo de vida completo do React."
+  ],
+  "correct": "Componentes de classe permitem o uso de hooks."
+},
+{
+  "_id": {
+    "$oid": "6489d1e3f514bc90e50194b8"
+  },
+  "prompt": "O que é JSX no React?",
+  "options": [
+    "Uma sintaxe alternativa para escrever HTML em JavaScript.",
+    "Uma função para criar componentes no React.",
+    "Uma ferramenta de transpilação para converter código React em código JavaScript puro.",
+    "Uma biblioteca para gerenciamento de estado no React."
+  ],
+  "correct": "Uma sintaxe alternativa para escrever HTML em JavaScript."
+},
+{
+  "_id": {
+    "$oid": "6489d1e3f514bc90e50194b9"
+  },
+  "prompt": "O que é o estado (state) no React e como ele é usado?",
+  "options": [
+    "O estado representa dados imutáveis no React e é usado para renderizar componentes.",
+    "O estado é um objeto JavaScript que contém dados mutáveis e é usado para interagir com APIs externas.",
+    "O estado é uma função do React que permite manipular eventos de clique.",
+    "O estado é uma propriedade especial no React que permite compartilhar dados entre componentes."
+  ],
+  "correct": "O estado representa dados imutáveis no React e é usado para renderizar componentes."
+},
+{
+  "_id": {
+    "$oid": "6489d1e3f514bc90e50194ba"
+  },
+  "prompt": "O que são 'props' no React e como eles são usados?",
+  "options": [
+    "'Props' são funções assíncronas no React que permitem lidar com chamadas de API.",
+    "'Props' são propriedades que permitem passar dados de um componente pai para um componente filho.",
+    "'Props' são variáveis globais que podem ser acessadas em qualquer componente no React.",
+    "'Props' são estilos CSS pré-definidos usados para estilizar componentes no React."
+  ],
+  "correct": "'Props' são propriedades que permitem passar dados de um componente pai para um componente filho."
+},
+{
+  "_id": {
+    "$oid": "6489d1e3f514bc90e50194bb"
+  },
+  "prompt": "O que é o Express.js e qual é o seu propósito no desenvolvimento web?",
+  "options": [
+    "Uma linguagem de programação para construção de interfaces de usuário.",
+    "Um banco de dados relacional amplamente utilizado.",
+    "Um framework Node.js rápido, flexível e minimalista para criação de aplicativos web.",
+    "Um serviço de hospedagem na nuvem para aplicativos web."
+  ],
+  "correct": "Um framework Node.js rápido, flexível e minimalista para criação de aplicativos web."
+},
+{
+  "_id": {
+    "$oid": "6489d1e3f514bc90e50194bc"
+  },
+  "prompt": "Como você lida com rotas (routes) no Express?",
+  "options": [
+    "O Express lida automaticamente com as rotas com base no URL da solicitação.",
+    "As rotas são configuradas usando os métodos HTTP e os caminhos de URL correspondentes no Express.",
+    "As rotas são gerenciadas apenas por um servidor separado, não pelo Express.",
+    "O Express oferece apenas suporte para rotas GET, não para outros métodos HTTP."
+  ],
+  "correct": "As rotas são configuradas usando os métodos HTTP e os caminhos de URL correspondentes no Express."
+},
+{
+  "_id": {
+    "$oid": "6489d1e3f514bc90e50194bd"
+  },
+  "prompt": "O que são middlewares no Express e como eles são usados?",
+  "options": [
+    "Middlewares são funções que têm acesso ao objeto de solicitação (request) e ao objeto de resposta (response) e podem executar ações intermediárias.",
+    "Middlewares são componentes gráficos usados para criar a interface do usuário no Express.",
+    "Middlewares são recursos externos, como bancos de dados, integrados ao Express.",
+    "Middlewares são usados apenas para autenticação de usuários no Express."
+  ],
+  "correct": "Middlewares são funções que têm acesso ao objeto de solicitação (request) e ao objeto de resposta (response) e podem executar ações intermediárias."
+},
+{
+  "_id": {
+    "$oid": "6489d1e3f514bc90e50194be"
+  },
+  "prompt": "Como você pode lidar com solicitações POST no Express?",
+  "options": [
+    "As solicitações POST são tratadas automaticamente pelo Express e não exigem configuração adicional.",
+    "As solicitações POST são tratadas usando o método 'express.post()' no Express.",
+    "As solicitações POST são tratadas usando o middleware 'body-parser' para analisar os dados do corpo da solicitação.",
+    "O Express não suporta solicitações POST, apenas solicitações GET."
+  ],
+  "correct": "As solicitações POST são tratadas usando o middleware 'body-parser' para analisar os dados do corpo da solicitação."
+},
+{
+  "_id": {
+    "$oid": "6489d1e3f514bc90e50194bf"
+  },
+  "prompt": "Como você lida com erros (errors) no Express?",
+  "options": [
+    "Os erros são tratados automaticamente pelo Express e não requerem nenhum código adicional.",
+    "Erros são tratados usando o middleware 'express-error-handler' no Express.",
+    "Erros são tratados usando blocos try-catch no código do Express.",
+    "Erros são tratados usando middlewares de tratamento de erros no Express."
+  ],
+  "correct": "Erros são tratados usando middlewares de tratamento de erros no Express."
+},
+{
+  "_id": {
+    "$oid": "6489d1e3f514bc90e50194c0"
+  },
+  "prompt": "O que é o MongoDB e como ele difere de um banco de dados relacional?",
+  "options": [
+    "O MongoDB é um banco de dados relacional que segue o modelo SQL.",
+    "O MongoDB é um banco de dados baseado em documentos, enquanto os bancos de dados relacionais são baseados em tabelas.",
+    "O MongoDB é um banco de dados de memória volátil, enquanto os bancos de dados relacionais são persistentes.",
+    "O MongoDB é uma linguagem de programação usada para consultas em bancos de dados relacionais."
+  ],
+  "correct": "O MongoDB é um banco de dados baseado em documentos, enquanto os bancos de dados relacionais são baseados em tabelas."
+},
+{
+  "_id": {
+    "$oid": "6489d1e3f514bc90e50194c1"
+  },
+  "prompt": "Quais são as vantagens do MongoDB em relação a outros bancos de dados?",
+  "options": [
+    "Esquema flexível, escalabilidade horizontal e suporte nativo para transações.",
+    "Velocidade de leitura e escrita, suporte para chaves estrangeiras e integridade referencial.",
+    "Baixo consumo de memória, suporte nativo para SQL e alta disponibilidade.",
+    "Melhor desempenho em consultas complexas, recursos avançados de relatórios e fácil integração com frameworks JavaScript."
+  ],
+  "correct": "Esquema flexível, escalabilidade horizontal e suporte nativo para transações."
+},
+{
+  "_id": {
+    "$oid": "6489d1e3f514bc90e50194c2"
+  },
+  "prompt": "Como você pode se conectar a um banco de dados MongoDB usando JavaScript?",
+  "options": [
+    "Usando uma conexão direta através do protocolo TCP/IP.",
+    "Utilizando o pacote 'mongo-connector' disponível no npm.",
+    "Utilizando o driver oficial do MongoDB para JavaScript, como o 'mongodb' ou 'mongoose'.",
+    "Não é possível se conectar a um banco de dados MongoDB usando JavaScript."
+  ],
+  "correct": "Utilizando o driver oficial do MongoDB para JavaScript, como o 'mongodb' ou 'mongoose'."
+},
+{
+  "_id": {
+    "$oid": "6489d1e3f514bc90e50194c3"
+  },
+  "prompt": "O que é uma coleção (collection) no MongoDB?",
+  "options": [
+    "Um grupo de bancos de dados relacionados no MongoDB.",
+    "Um conjunto de registros com uma estrutura de dados definida no MongoDB.",
+    "Uma tabela no MongoDB que contém dados relacionais.",
+    "Uma função no MongoDB que permite agrupar documentos para consulta."
+  ],
+  "correct": "Um conjunto de registros com uma estrutura de dados definida no MongoDB."
+},
+{
+  "_id": {
+    "$oid": "6489d1e3f514bc90e50194c4"
+  },
+  "prompt": "Como você pode consultar dados em um banco de dados MongoDB usando JavaScript?",
+  "options": [
+    "Utilizando o método 'find()' em uma coleção do MongoDB.",
+    "Escrevendo consultas SQL no código JavaScript para obter dados do MongoDB.",
+    "Utilizando o método 'query()' no objeto de conexão com o banco de dados MongoDB.",
+    "Não é possível consultar dados em um banco de dados MongoDB usando JavaScript."
+  ],
+  "correct": "Utilizando o método 'find()' em uma coleção do MongoDB."
+}]
