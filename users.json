@@ -1,0 +1,38 @@
+[
+  {
+    "_id": {
+      "$oid": "648abf6fb095e64abf2939cf"
+    },
+    "name": "Andrezza Lima",
+    "username": "andrezzalima",
+    "password": "andrezza123",
+    "email": "andrezzadev@gmail.com"
+  },
+  {
+    "_id": {
+      "$oid": "648ac0ccb095e64abf2939d0"
+    },
+    "name": "Bárbara Oliveira",
+    "username": "barbaraoliveira",
+    "password": "barbara123",
+    "email": "barbara08olivemo@hotmail.com"
+  },
+  {
+    "_id": {
+      "$oid": "648ac0fdb095e64abf2939d1"
+    },
+    "name": "Iara Filipa",
+    "username": "iarafilipa",
+    "password": "iara123",
+    "email": "Iarafilipa35@hotmail.com"
+  },
+  {
+    "_id": {
+      "$oid": "648ac2d1b095e64abf2939d2"
+    },
+    "name": "Solange Dias",
+    "username": "solangedias",
+    "password": "solande123",
+    "email": "solangedias7@hotmail.com"
+  }
+]

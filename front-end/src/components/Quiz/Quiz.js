@@ -1,17 +1,15 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 import { AnswerButton } from "./AnswerButton";
 //css
 import "./Quiz.css";
 
 function Quiz() {
-  const [index, setIndex] = useState(0);
-  const [points, setPoints] = useState(0);
-  const [jokers, setjokers] = useState(["", "", "", "", "", "", ""]);
-  const [disabledAnswers, setDisabledAnswers] = useState([]);
+  const [percentage, setPercentage] = useState(0);
   const [questions, setQuestions] = useState([]);
-  const [questionNumber, setQuestionNumber] = useState(1);
-  const [quizCompleted, setQuizCompleted] = useState(false);
+  const [userAnswers, setAnswers] = useState([]);
+  const [questionNumber, setQuestionNumber] = useState(0);
   const totalQuestions = 10;
 
   //Carregar questoes
@@ -39,10 +37,9 @@ function Quiz() {
     return shuffled;
   };
 
-  // ** MANAGES ANSWERS AND POINTS
   const evaluateAnswer = async (e) => {
     const selectedAnswer = e.target.value;
-    const questionId = questions[index]._id;
+    const questionId = questions[questionNumber]._id;
 
     const response = await fetch("/api/validate-question", {
       method: "POST",
@@ -53,69 +50,98 @@ function Quiz() {
     });
 
     if (response.status === 200) {
-      const { isCorrectAnswer, pointsEarned } = await response.json();
+      const { isCorrect } = await response.json();
+      setAnswers((previousAnswrs) => {
+        return [...previousAnswrs, isCorrect];
+      });
 
-      if (isCorrectAnswer) {
-        setPoints((prevPoints) => prevPoints + pointsEarned);
-      }
-
-      setIndex((prevIndex) => prevIndex + 1);
-      setDisabledAnswers([]);
-
-      if (questionNumber === totalQuestions) {
-        const percentage = calculatePercentage();
-        setQuizCompleted(true);
-        console.log(`Percentage: ${percentage}%`);
-      } else {
-        setQuestionNumber((prevNumber) => prevNumber + 1);
-      }
+      setQuestionNumber((prevNumber) => {
+        if (prevNumber + 1 === totalQuestions) {
+          // calculatePercentage([...userAnswers, isCorrect]);
+          savePorcentage([...userAnswers, isCorrect]);
+        }
+        return prevNumber + 1;
+      });
     }
   };
 
-  // Calcular porcentagem de perguntas corretas
-  const calculatePercentage = () => {
-    const correctAnswers = questions.filter(
-      (question) => question.correct === question.userAnswer
-    );
-    const percentage = (correctAnswers.length / totalQuestions) * 100;
-    return percentage.toFixed(2);
+  const calculatePercentage = (userAnswers) => {
+    console.log("hey", userAnswers);
+    const percentage =
+      (userAnswers.filter((e) => e === true).length / totalQuestions) * 100;
+    console.log(percentage);
+    setPercentage(percentage.toFixed(0));
+    return percentage.toFixed(0);
+  };
+
+  const savePorcentage = async (userAnswers) => {
+    const percentage = calculatePercentage(userAnswers);
+
+    const response = await fetch("/api/save-percentage", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ percentage: percentage }),
+    });
+    if (response.status === 200) {
+      const data = await response.json();
+      console.log(data);
+    }
   };
 
   return (
     <div className="h-screen bg-slate-300 flex background-quiz">
-      {/* <h2>{points} pontos</h2> */}
       <h1 className="h1-quiz">
         Pergunta nº: {questionNumber}/{totalQuestions}
       </h1>
 
       <div className="questions">
-        <div>
-          <div className="question">
-            {questions[index] !== undefined ? (
-              <h2 className="h2-quiz">{questions[index]?.prompt}</h2>
-            ) : (
-              ""
+        {questionNumber <= totalQuestions - 1 ? (
+          <div>
+            {questions.length > 0 && (
+              <div>
+                <div className="question">
+                  {questions[questionNumber] !== undefined ? (
+                    <h2 className="h2-quiz">
+                      {questions[questionNumber]?.prompt}
+                    </h2>
+                  ) : (
+                    ""
+                  )}
+                </div>
+
+                <div className="answers">
+                  {questions[questionNumber]?.options.map((answer) => {
+                    return (
+                      <AnswerButton
+                        className="oneAnswer"
+                        key={uuidv4()}
+                        option={answer}
+                        checkAnswer={(e) => evaluateAnswer(e)}
+                      />
+                    );
+                  })}
+                </div>
+              </div>
             )}
           </div>
+        ) : (
+          <div className="finish-quiz-mesage">
+            <h2>Você concluiu o quiz!</h2>
+            <p>Você acertou: {percentage}%</p>
 
-          <div className="answers">
-            {questions[index]?.options.map((answer) => (
-              <AnswerButton
-                className="oneAnswer"
-                disabledAnswers={disabledAnswers}
-                key={uuidv4()}
-                option={answer}
-                checkAnswer={(e) => evaluateAnswer(e)}
-              />
-            ))}
+            {percentage >= 90 ? (
+              <Link to="/signup">
+                <button className="perfil-codeMaster">
+                  <span className="parabens">Parabéns!</span> <br></br>Cria teu perfil codeMaster.
+                </button>
+              </Link>
+            ) : (
+              <div>Estuda um pouco mais e volta a tentar!</div>
+            )}
           </div>
-        </div>
-      {quizCompleted && (
-        <div>
-          <h2>Quiz Completed!</h2>
-          <p>Percentage: {calculatePercentage()}%</p>
-        </div>
-      )}
+        )}
       </div>
     </div>
   );

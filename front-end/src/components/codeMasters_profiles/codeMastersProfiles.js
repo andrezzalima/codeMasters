@@ -27,10 +27,8 @@ function CodeMastersProfiles(props) {
 
   return (
     <div className="background-codeMastersProfiles">
-        <div className="header-profiles">
-          <Link to="/"><img src={logo} className="logo" alt="Logo" /></Link>
-        </div>
       <div className="div-profiles">
+      <Link to="/"><img src={logo} className="logo" alt="Logo" /></Link>
         <div className="div-codeMasters">
         {profiles.map((profile, index) => (
   <div className={`profile-item ${index % 2 === 0 ? 'item-left' : 'item-right'}`} key={profile._id}>

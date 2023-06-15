@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap');
+
+.background-signUp{
+    background-color: #D9D9D9;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-family: 'Work Sans', sans-serif;
+    align-items: center;
+}
+
+.content-signup{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+    height: 80%;
+
+}
+
+.div-text-signUp{
+    width: 20%;
+    height: 50%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #3B3B7F;
+    border-radius: 20px;
+    box-shadow: 60px -16px #8F8FAF;
+}
+
+.div-inputs-signUp{
+    width: 20%;
+    height: 50%;
+    padding: 50px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #3B3B7F;
+    border-radius: 20px;
+    box-shadow: 60px -16px #8F8FAF;
+    gap: 15px;
+    ;
+
+    
+    
+}
+span{
+    font-weight: 700;
+}
+
+.input-signup{
+    width: 50%;
+    margin-left: 20%;
+    border-radius: 5px;
+    border: none;
+    height: 20px;
+}
+
+.label-signup{
+    font-weight: 700;
+    display: flex;
+    margin-left: 20%;
+}
+.button-signup{
+    height: 50px;
+    width: 150px;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    background-color: #3B3B7F;
+    color: white;
+    font-size: 20px;
+    font-family: 'Play', sans-serif;
+    font-weight: 700;
+    margin-top: 15px;
+    margin-left: 25%;
+}
+.p-signup{
+    padding: 50px;
+
+}
+
+.logotipo{
+    width: 80px;
+    position: absolute;
+    top: 20px;
+    left: 30px;
+
+}

@@ -2,23 +2,23 @@
     {
     "prompt": "O que é JavaScript e qual é o seu propósito principal?",
     "options": [
-    "JavaScript é uma linguagem de marcação para criar páginas web.",
     "JavaScript é uma linguagem de programação usada principalmente para tornar as páginas web interativas.",
+    "JavaScript é uma linguagem de marcação para criar páginas web.",
     "JavaScript é um banco de dados amplamente utilizado para armazenar informações.",
     "JavaScript é uma biblioteca JavaScript para construir interfaces de usuário."
     ],
     "correct": "JavaScript é uma linguagem de programação usada principalmente para tornar as páginas web interativas."
-    
+        
     },
     {
     "prompt": "Quais são os tipos de dados primitivos em JavaScript?",
     "options": [
-    "Inteiro, string, booleano e objeto.",
-    "Número, caractere, booleano e matriz.",
-    "Número, string, booleano e indefinido.",
+    "Número, string, boolean e undefined.",
+    "Inteiro, string, boolean e object.",
+    "Número, caractere, boolean e matriz.",
     "Inteiro, caractere, verdadeiro e falso."
     ],
-    "correct": "Número, string, booleano e indefinido."
+    "correct": "Número, string, boolean e undefined."
     },
     
     
@@ -61,8 +61,8 @@
     {
     "prompt": "O que é React e por que é popular no desenvolvimento web?",
     "options": [
-    "Uma linguagem de programação para criação de aplicativos móveis.",
     "Uma biblioteca JavaScript para construir interfaces de usuário.",
+    "Uma linguagem de programação para criação de aplicativos móveis.",
     "Um framework para desenvolvimento de jogos em 3D.",
     "Um protocolo de rede para comunicação entre servidores e clientes."
     ],
@@ -72,8 +72,8 @@
     {
     "prompt": "Qual é a diferença entre componentes funcionais e componentes de classe no React?",
     "options": [
-    "Componentes funcionais são mais eficientes em termos de desempenho.",
     "Componentes de classe permitem o uso de hooks.",
+    "Componentes funcionais são mais eficientes em termos de desempenho.",
     "Componentes funcionais são escritos em ES6, enquanto componentes de classe são escritos em ES5.",
     "Componentes de classe têm acesso ao ciclo de vida completo do React."
     ],
@@ -105,8 +105,8 @@
     {
     "prompt": "O que são 'props' no React e como eles são usados?",
     "options": [
-    "'Props' são funções assíncronas no React que permitem lidar com chamadas de API.",
     "'Props' são propriedades que permitem passar dados de um componente pai para um componente filho.",
+    "'Props' são funções assíncronas no React que permitem lidar com chamadas de API.",
     "'Props' são variáveis globais que podem ser acessadas em qualquer componente no React.",
     "'Props' são estilos CSS pré-definidos usados para estilizar componentes no React."
     ],
@@ -116,9 +116,9 @@
     {
     "prompt": "O que é o Express.js e qual é o seu propósito no desenvolvimento web?",
     "options": [
+    "Um framework Node.js rápido, flexível e minimalista para criação de aplicativos web.",
     "Uma linguagem de programação para construção de interfaces de usuário.",
     "Um banco de dados relacional amplamente utilizado.",
-    "Um framework Node.js rápido, flexível e minimalista para criação de aplicativos web.",
     "Um serviço de hospedagem na nuvem para aplicativos web."
     ],
     "correct": "Um framework Node.js rápido, flexível e minimalista para criação de aplicativos web."
@@ -127,8 +127,8 @@
     {
     "prompt": "Como você lida com rotas (routes) no Express?",
     "options": [
-    "O Express lida automaticamente com as rotas com base no URL da solicitação.",
     "As rotas são configuradas usando os métodos HTTP e os caminhos de URL correspondentes no Express.",
+    "O Express lida automaticamente com as rotas com base no URL da solicitação.",
     "As rotas são gerenciadas apenas por um servidor separado, não pelo Express.",
     "O Express oferece apenas suporte para rotas GET, não para outros métodos HTTP."
     ],
@@ -149,9 +149,9 @@
     {
     "prompt": "Como você pode lidar com solicitações POST no Express?",
     "options": [
+    "As solicitações POST são tratadas usando o middleware 'body-parser' para analisar os dados do corpo da solicitação.",
     "As solicitações POST são tratadas automaticamente pelo Express e não exigem configuração adicional.",
     "As solicitações POST são tratadas usando o método 'express.post()' no Express.",
-    "As solicitações POST são tratadas usando o middleware 'body-parser' para analisar os dados do corpo da solicitação.",
     "O Express não suporta solicitações POST, apenas solicitações GET."
     ],
     "correct": "As solicitações POST são tratadas usando o middleware 'body-parser' para analisar os dados do corpo da solicitação."
@@ -160,10 +160,10 @@
     {
     "prompt": "Como você lida com erros (errors) no Express?",
     "options": [
+    "Erros são tratados usando middlewares de tratamento de erros no Express.",
     "Os erros são tratados automaticamente pelo Express e não requerem nenhum código adicional.",
     "Erros são tratados usando o middleware 'express-error-handler' no Express.",
-    "Erros são tratados usando blocos try-catch no código do Express.",
-    "Erros são tratados usando middlewares de tratamento de erros no Express."
+    "Erros são tratados usando blocos try-catch no código do Express."
     ],
     "correct": "Erros são tratados usando middlewares de tratamento de erros no Express."
     },
@@ -171,8 +171,8 @@
     {
     "prompt": "O que é o MongoDB e como ele difere de um banco de dados relacional?",
     "options": [
-    "O MongoDB é um banco de dados relacional que segue o modelo SQL.",
     "O MongoDB é um banco de dados baseado em documentos, enquanto os bancos de dados relacionais são baseados em tabelas.",
+    "O MongoDB é um banco de dados relacional que segue o modelo SQL.",
     "O MongoDB é um banco de dados de memória volátil, enquanto os bancos de dados relacionais são persistentes.",
     "O MongoDB é uma linguagem de programação usada para consultas em bancos de dados relacionais."
     ],
@@ -193,9 +193,9 @@
     {
     "prompt": "Como você pode se conectar a um banco de dados MongoDB usando JavaScript?",
     "options": [
+    "Utilizando o driver oficial do MongoDB para JavaScript, como o 'mongodb' ou 'mongoose'.",
     "Usando uma conexão direta através do protocolo TCP/IP.",
     "Utilizando o pacote 'mongo-connector' disponível no npm.",
-    "Utilizando o driver oficial do MongoDB para JavaScript, como o 'mongodb' ou 'mongoose'.",
     "Não é possível se conectar a um banco de dados MongoDB usando JavaScript."
     ],
     "correct": "Utilizando o driver oficial do MongoDB para JavaScript, como o 'mongodb' ou 'mongoose'."
@@ -204,8 +204,8 @@
     {
     "prompt": "O que é uma coleção (collection) no MongoDB?",
     "options": [
-    "Um grupo de bancos de dados relacionados no MongoDB.",
     "Um conjunto de registros com uma estrutura de dados definida no MongoDB.",
+    "Um grupo de bancos de dados relacionados no MongoDB.",
     "Uma tabela no MongoDB que contém dados relacionais.",
     "Uma função no MongoDB que permite agrupar documentos para consulta."
     ],

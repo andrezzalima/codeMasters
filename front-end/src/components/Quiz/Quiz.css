@@ -15,7 +15,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px
+    padding: 20px;
+
 }
 
 .question{
@@ -24,7 +25,8 @@
     justify-content: center ;
     text-align: center;
     height: 80px;
-    margin-top: 50px;
+    margin-top: 20px;
+    margin-bottom: 50px;
 }
 
 .h1-quiz{
@@ -54,4 +56,30 @@
     background-color: #D9D9D9;
     color: black;
     font-family: 'Play', sans-serif;
+}
+
+.finish-quiz-mesage{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.perfil-codeMaster{
+    height: auto;
+    width: 300px;
+    padding: 20px;
+    border-radius: 20px;
+    border: none;
+    background-color: #D9D9D9;
+    color: #3B3B7F;
+    font-size: 24px;
+    font-family: 'Play', sans-serif;
+    font-weight: 700;
+    margin-top: 50px;
+    font-size: 16px;
+}
+
+.parabens{
+    font-size: 20px;
 }

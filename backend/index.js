@@ -1,6 +1,10 @@
 const express = require("express");
 const { getMongoCollection } = require("./database/db");
-const { ObjectId, MongoUnexpectedServerResponseError } = require("mongodb");
+const {
+  ObjectId,
+  MongoUnexpectedServerResponseError,
+  MongoClient,
+} = require("mongodb");
 
 const port = process.env.PORT ?? 5030;
 const mongoUrl = "mongodb://localhost:27017";
@@ -17,9 +21,8 @@ app.get("/api/questions", async (req, res) => {
     // Lógica para obter todas as perguntas da base de dados
     const questionsCollection = await getMongoCollection("questions");
     const questions = await questionsCollection.find().toArray();
-    console.log(questions)
 
-    return res.status(200).json( questions );
+    return res.status(200).json(questions);
   } catch (error) {
     console.error("Erro ao obter perguntas:", error);
     res.status(500).json({ error: error.message });
@@ -31,12 +34,47 @@ app.post("/api/users", async (req, res) => {
   try {
     // Lógica para criar usuário
     const { name, username, password, email } = req.body;
+    console.log(req.body);
     const usersCollection = await getMongoCollection("users");
-    const result = await usersCollection.insertOne({ name, username, password, email });
+    const result = await usersCollection.insertOne({
+      name,
+      username,
+      password,
+      email,
+    });
 
-    res.json({ sucess });
+    res.json({ message: "success" });
   } catch (error) {
     console.error("Erro ao criar usuário:", error);
+    res.status(500).json({ error: error.message });
+  }
+});
+
+//salvar porcentagem
+app.post("/api/save-percentage", async (req, res) => {
+  try {
+    // Lógica para armazenar a percentagem das perguntas
+    const { percentage } = req.body;
+    console.log(percentage);
+
+    if (!percentage || percentage.length === 0) {
+      return res.status(400).json({ error: "Percentagem não fornecida" });
+    }
+
+    // Conectar ao banco de dados MongoDB
+    const client = new MongoClient(mongoUrl);
+    await client.connect();
+    const collection = await client.db(dbName).collection("percentages");
+
+    // Atualizar a percentagem no documento "settings" na coleção "config"
+    const result = await collection.insertOne({ percentage });
+
+    // Fechar a conexão com o banco de dados
+    client.close();
+
+    res.json({ id: result.insertedId, message: "percentagem recebida" });
+  } catch (error) {
+    console.error("Erro ao armazenar a percentagem das perguntas:", error);
     res.status(500).json({ error: error.message });
   }
 });
@@ -49,15 +87,18 @@ app.post("/api/validate-question", async (req, res) => {
 
     // Aqui você precisará acessar a pergunta no banco de dados com base no questionId
     const questionsCollection = await getMongoCollection("questions");
-    const question = await questionsCollection.findOne({ _id: new ObjectId(questionId) });
+    const question = await questionsCollection.findOne({
+      _id: new ObjectId(questionId),
+    });
 
     if (!question) {
       return res.status(404).json({ error: "Pergunta não encontrada" });
     }
 
-
     // Comparar a resposta fornecida pelo usuário com a resposta correta da pergunta
     const isCorrect = question.correct === userAnswer;
+
+    //Inserir nabase de dados o id da pergunta e se acertou
 
     res.json({ isCorrect });
   } catch (error) {
@@ -85,7 +126,6 @@ app.get("/api/profile", async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 });
-
 
 app.put("/api/users", async (req, res) => {
   try {
