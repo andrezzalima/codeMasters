@@ -25,14 +25,5 @@
     "username": "iarafilipa",
     "password": "iara123",
     "email": "Iarafilipa35@hotmail.com"
-  },
-  {
-    "_id": {
-      "$oid": "648ac2d1b095e64abf2939d2"
-    },
-    "name": "Solange Dias",
-    "username": "solangedias",
-    "password": "solande123",
-    "email": "solangedias7@hotmail.com"
   }
 ]
