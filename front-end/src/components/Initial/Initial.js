@@ -13,6 +13,7 @@ function Initial() {
     <div className="background-initial">
       <div className="header-initial">
         <img src={logo} className="logo"></img>
+        <Link to="/codemastersprofiles"><button className="button-codeMasters">Conheça nossos CodeMasters</button></Link>
         <img src={imagem_initial} className="tecnology"></img>
       </div>
       <div className="body-initial">
@@ -21,6 +22,7 @@ function Initial() {
           </div>
         </div>
         <Link to="/quiz"><button className="button-quiz">Junta-te a nós</button></Link>
+      
       </div>
 
   );

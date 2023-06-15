@@ -5,15 +5,12 @@
     font-family: 'Play', sans-serif;
 
 }
-
-
 .header-initial{
     height: 20%;
     display: flex;
     justify-content: space-between;
-    
+    align-items: center;
 }
-
 .body-initial{
     background-image: url('../../img/img-background-initial.png');
     height: 80%;
@@ -22,10 +19,8 @@
     background-size: cover;
     display: flex;
     justify-content: center;
-    align-items: center;
-        
+    align-items: center;     
 }
-
 .carrocel{
     flex-direction: column;
     font-family: 'Play', sans-serif;
@@ -37,22 +32,35 @@
     font-size: 30px;
     font: 700;
     justify-content: space-around;
-    border-radius: 30px;    
-    
+    border-radius: 30px;      
 }
-
-
 
 .button-quiz{
     height: 80px;
     width: 300px;
     padding: 20px;
     position: absolute;
-left: 42%;
-bottom: 5%;
+    left: 42%;
+    bottom: 5%;
     border-radius: 20px;
     border: none;
     font-size: 24px;
     font-family: 'Play', sans-serif;
     font-weight: 700;
+}
+
+.button-codeMasters{
+    height: 80px;
+    width: 300px;
+    padding: 20px;
+    border-radius: 20px;
+    border: none;
+    background-color: #3B3B7F;
+    color: white;
+    font-size: 24px;
+    font-family: 'Play', sans-serif;
+    font-weight: 700;
+}
+.tecnology{
+    width: 400px;
 }

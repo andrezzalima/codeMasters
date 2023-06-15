@@ -30,11 +30,11 @@ app.get("/api/questions", async (req, res) => {
 app.post("/api/users", async (req, res) => {
   try {
     // Lógica para criar usuário
-    const { username } = req.body;
+    const { name, username, password, email } = req.body;
     const usersCollection = await getMongoCollection("users");
-    const result = await usersCollection.insertOne({ username });
+    const result = await usersCollection.insertOne({ name, username, password, email });
 
-    res.json({ user: result.ops[0] });
+    res.json({ sucess });
   } catch (error) {
     console.error("Erro ao criar usuário:", error);
     res.status(500).json({ error: error.message });
@@ -59,7 +59,6 @@ app.post("/api/validate-question", async (req, res) => {
     // Comparar a resposta fornecida pelo usuário com a resposta correta da pergunta
     const isCorrect = question.correct === userAnswer;
 
-
     res.json({ isCorrect });
   } catch (error) {
     console.error("Erro ao validar pergunta:", error);
@@ -67,24 +66,22 @@ app.post("/api/validate-question", async (req, res) => {
   }
 });
 
-// Endpoint para buscar perfil
+// Endpoint para buscar perfils
 app.get("/api/profile", async (req, res) => {
   try {
-    const username = req.body;
-console.log(username)
     // Aqui você precisará acessar a coleção de usuários no banco de dados
     const usersCollection = await getMongoCollection("users");
 
-    // Buscar o usuário com base no nome de usuário
-    const user = await usersCollection.findOne(username);
-    console.log(user)
-    if (!user) {
-      return res.status(404).json({ error: "Usuário não encontrado" });
+    // Buscar todos os perfis de usuários
+    const profiles = await usersCollection.find().toArray();
+
+    if (profiles.length === 0) {
+      return res.status(404).json({ error: "Nenhum perfil encontrado" });
     }
 
-    res.json({ profile: user });
+    res.json({ profiles });
   } catch (error) {
-    console.error("Erro ao buscar perfil do usuário:", error);
+    console.error("Erro ao buscar perfis de usuário:", error);
     res.status(500).json({ error: error.message });
   }
 });
