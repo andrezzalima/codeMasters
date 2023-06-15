@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { AnswerButton } from "./AnswerButton";
 //css
-import "./Quiz.css"
+import "./Quiz.css";
 
 function Quiz() {
   const [index, setIndex] = useState(0);
@@ -10,6 +10,9 @@ function Quiz() {
   const [jokers, setjokers] = useState(["", "", "", "", "", "", ""]);
   const [disabledAnswers, setDisabledAnswers] = useState([]);
   const [questions, setQuestions] = useState([]);
+  const [questionNumber, setQuestionNumber] = useState(1);
+  const [quizCompleted, setQuizCompleted] = useState(false);
+  const totalQuestions = 10;
 
   //Carregar questoes
   useEffect(() => {
@@ -58,33 +61,46 @@ function Quiz() {
 
       setIndex((prevIndex) => prevIndex + 1);
       setDisabledAnswers([]);
+
+      if (questionNumber === totalQuestions) {
+        const percentage = calculatePercentage();
+        setQuizCompleted(true);
+        console.log(`Percentage: ${percentage}%`);
+      } else {
+        setQuestionNumber((prevNumber) => prevNumber + 1);
+      }
     }
   };
 
-
   // Calcular porcentagem de perguntas corretas
   const calculatePercentage = () => {
-    const correctAnswers = questions.filter((question) => question.correct === question.userAnswer);
-    const percentage = (correctAnswers.length / questions.length) * 100;
+    const correctAnswers = questions.filter(
+      (question) => question.correct === question.userAnswer
+    );
+    const percentage = (correctAnswers.length / totalQuestions) * 100;
     return percentage.toFixed(2);
   };
 
   return (
-    <div className="h-screen bg-slate-300 flex background-quiz" >
-       {/* <h2>{points} pontos</h2> */} 
-       <h1 className="h1-quiz">Pergunta nº: {index+1}/10</h1>
-              
-      <div className="questions"> 
+    <div className="h-screen bg-slate-300 flex background-quiz">
+      {/* <h2>{points} pontos</h2> */}
+      <h1 className="h1-quiz">
+        Pergunta nº: {questionNumber}/{totalQuestions}
+      </h1>
+
+      <div className="questions">
         <div>
           <div className="question">
             {questions[index] !== undefined ? (
               <h2 className="h2-quiz">{questions[index]?.prompt}</h2>
-            ): ''}
+            ) : (
+              ""
+            )}
           </div>
 
           <div className="answers">
             {questions[index]?.options.map((answer) => (
-              <AnswerButton 
+              <AnswerButton
                 className="oneAnswer"
                 disabledAnswers={disabledAnswers}
                 key={uuidv4()}
@@ -94,6 +110,12 @@ function Quiz() {
             ))}
           </div>
         </div>
+      {quizCompleted && (
+        <div>
+          <h2>Quiz Completed!</h2>
+          <p>Percentage: {calculatePercentage()}%</p>
+        </div>
+      )}
       </div>
     </div>
   );
