@@ -8,16 +8,16 @@ import "@splidejs/react-splide/css";
 export default function Examplo() {
   return (
     <div className="background-carrocel">
-      <Splide aria-label="Minhas imagens favoritas">
-        <SplideSlide>
-          <h1>Testa o teu conhecimento...</h1>
+      <Splide aria-label="Minhas imagens favoritas" > 
+        <SplideSlide >
+          <h1>Testa o teu <br></br>conhecimento...</h1>
           <div className="imagens-carrocel">
             <img src={code} alt="Imagem 1" className="code" />
             <img src={vetor} alt="Imagem 2" className="vetor" />
           </div>
         </SplideSlide>
         <SplideSlide>
-          <h1>Avalia as tuas habilidades... </h1>
+          <h1>Avalia as tuas <br></br>habilidades... </h1>
           <div className="imagens-carrocel">
             <img src={code} alt="Imagem 1" className="code"/>
             <img src={vetor} alt="Imagem 2" className="vetor" />
